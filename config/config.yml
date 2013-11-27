@@ -1,6 +1,6 @@
 defaults: &defaults
   site:
-    name: "stacktxt"
+    name: "StackTXT"
     title_seprator: "--"
 
   message:

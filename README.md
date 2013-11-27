@@ -1,6 +1,6 @@
-## Stacktxt
+## StackTXT
 
-Stacktxt is a 'burn after reading' text sharing web application.    
+**StackTXT** is a 'burn after reading' text sharing web application.    
 Now under development.   
 
 ## License
