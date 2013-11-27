@@ -56,9 +56,9 @@ gem 'pry-rails', group: [:development, :test]
 # static settings
 gem 'settingslogic'
 
-# redis
-gem 'redis-namespace'
-gem 'redis-objects'
+# memcached
+gem 'rack-cache'
+gem 'dalli'
 
 # better errors
 gem 'better_errors', group: :development

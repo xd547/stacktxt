@@ -27,5 +27,6 @@ module Stacktxt
 
     # autoload_paths
     config.autoload_paths += Dir["#{config.root}/lib", "#{config.root}/lib/**/", "#{config.root}"]
+    config.cache_store = :dalli_store
   end
 end
