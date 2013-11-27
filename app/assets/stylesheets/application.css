@@ -25,3 +25,14 @@ body {
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
+
+.message {
+  position: fixed;
+  z-index: 2048;
+  margin: 0 auto;
+  padding: 2px;
+  top:0px;
+  left: 40%;
+  background-color: #FBE122;
+  border: solid 1px #FEDB00;
+}

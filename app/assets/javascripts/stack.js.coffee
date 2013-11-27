@@ -19,4 +19,4 @@ new_share = ->
 
 $("share").addEventListener("click", share) if $("share") 
 
-$("new").addEventListener("click", new_share)
+$("new").addEventListener("click", new_share) if $("new")

@@ -3,8 +3,14 @@ require "core/share_actions"
 class StackController < ApplicationController
   def index
     if request.method == 'POST'
-      share_key = Core::ShareActions.save(get_content)
-      redirect_to share_path(share_key)
+      @content = get_content
+      if get_content == ""
+        flash[:error] = "Empty message"
+        redirect_to root_path
+      else
+        share_key = Core::ShareActions.save(get_content)
+        redirect_to share_path(share_key)
+      end
     end
   end
 
@@ -18,6 +24,7 @@ class StackController < ApplicationController
         format.html
         format.json { render json: @share_obj }
       else
+        flash[:error] = "Message Burned." # write by coding.game
         format.html { redirect_to root_path }
         format.json { render json: { content: "error", status: :unprocessable_entity } }
       end
