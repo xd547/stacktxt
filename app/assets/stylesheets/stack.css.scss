@@ -1,3 +1,38 @@
 // Place all the styles related to the stack controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+body >nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1024;
+  width: 100%;
+  height: 50px;
+  background-color: #d9d9d6;
+}
+
+h1 {
+  padding: 0.6em 0.6em;
+  display: inline-block;
+}
+
+#share {
+  display: inline;
+  width: 100px;
+  height: 25px;
+}
+
+#share_content {
+  border: 0;
+  margin-top: 50px;
+  display: block;
+  height: 1024px;
+  width: 100%;
+  font-size: 16pt;
+}
+
+#share_url {
+  width: 300px;
+  display: inline;
+}

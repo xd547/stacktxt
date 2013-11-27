@@ -4,7 +4,9 @@ Stacktxt::Application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'stack#index'
+  # root 'stack#index'
+  match "/" => "stack#index", as: "root", via: [:get, :post]
+  match "/:share_key" => "stack#show", as: "share", via: :get
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
