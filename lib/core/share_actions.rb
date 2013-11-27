@@ -38,10 +38,9 @@ module Core
       if share_obj and share_obj[:view_count] < Settings.message.max_view_count 
         if share_obj[:created_at] + Settings.message.expire > DateTime.now.to_i
           result = true
-        else
-          dc.delete(share_key)
         end
       end
+      dc.delete(share_key) unless result
       result
     end
 
