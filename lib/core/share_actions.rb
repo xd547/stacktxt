@@ -7,6 +7,8 @@ module Core
   # created_at
   # view_count
   # share_key
+    
+    @@dc = nil
 
     def self.save(content)
       share_key = create_key
@@ -57,8 +59,8 @@ module Core
         namesapce: Settings.site.name,
         expires_in: Settings.message.expire,
         compress: true }
-      dc = Dalli::Client.new("localhost:11211", options)
-      dc
+      @@dc = Dalli::Client.new("localhost:11211", options) if @@dc == nil
+      @@dc
     end
 
     def self.create_rand_string(length = 6)
