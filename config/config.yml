@@ -6,7 +6,7 @@ defaults: &defaults
   message:
     expire: 300 # 5 minutes
     max_view_count: 16 
-    max_length: 65535
+    max_length: 1024
 
 development:
   <<: *defaults

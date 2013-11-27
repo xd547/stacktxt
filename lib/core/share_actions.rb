@@ -15,6 +15,7 @@ module Core
       dc = get_dc
       share_obj = { content: content, created_at: DateTime.now.to_i, view_count: 0}
       dc.set(share_key, share_obj)
+      Rails.logger.info("Core::ShareActions: new share_obj created")
       share_key
     end
 
