@@ -4,17 +4,7 @@ class StackController < ApplicationController
   def index
     if request.method == 'POST'
       share_key = Core::ShareActions.save(get_content)
-      respond_to do |format|
-        format.html { redirect_to share_path(share_key) }
-        format.json { 
-          @share_obj = Core::ShareActions.get(share_key)
-          if Core::ShareActions.verify(@share_obj)
-            render json: @share_obj
-          else
-            render json: { content: "error", status: :unprocessable_entity }
-          end
-        }
-      end
+      redirect_to share_path(share_key)
     end
   end
 
@@ -22,10 +12,15 @@ class StackController < ApplicationController
     share_key = params[:share_key]
     @share_obj = Core::ShareActions.get(share_key)
   
-    if Core::ShareActions.verify(@share_obj)
-      @content = @share_obj[:content]
-    else
-      redirect_to root_path
+    respond_to do |format|
+      if Core::ShareActions.verify(@share_obj)
+        @content = @share_obj[:content]
+        format.html
+        format.json { render json: @share_obj }
+      else
+        format.html { redirect_to root_path }
+        format.json { render json: { content: "error", status: :unprocessable_entity } }
+      end
     end
   end
 
