@@ -1,0 +1,14 @@
+defaults: &defaults
+  site_name: "stacktxt.com"
+  message:
+    expire: 300 # 5 minutes
+    max_view_count: 10
+
+development:
+  <<: *defaults
+
+test:
+  <<: *defaults
+
+production:
+  <<: *defaults
