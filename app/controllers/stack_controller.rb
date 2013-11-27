@@ -8,8 +8,14 @@ class StackController < ApplicationController
         flash[:error] = "Empty message"
         redirect_to root_path
       else
-        share_key = Core::ShareActions.save(get_content)
-        redirect_to share_path(share_key)
+        if @content.length < Settings.message.max_length
+          share_key = Core::ShareActions.save(get_content)
+          redirect_to share_path(share_key)
+        else
+          flash[:error] = "Message too long"
+          redirect_to root_path
+        end
+
       end
     end
   end
