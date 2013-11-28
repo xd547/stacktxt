@@ -1,0 +1,2 @@
+#!/bin/bash
+puma -C config/puma.rb
