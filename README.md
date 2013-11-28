@@ -1,7 +1,9 @@
 ## StackTXT
 
 **StackTXT** is a 'burn after reading' text sharing web application.    
-Now under development.   
+
+**What's New
+Released v0.1.0 
 
 ## License
 
