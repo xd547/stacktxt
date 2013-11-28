@@ -16,3 +16,4 @@
 /tmp
 
 /config/newrelic.yml
+/public/assets/*
