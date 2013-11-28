@@ -65,6 +65,7 @@ GEM
     mime-types (1.25.1)
     minitest (4.7.5)
     multi_json (1.8.2)
+    newrelic_rpm (3.6.9.171)
     polyglot (0.3.3)
     pry (0.9.12.4)
       coderay (~> 1.0)
@@ -72,6 +73,8 @@ GEM
       slop (~> 3.4)
     pry-rails (0.3.2)
       pry (>= 0.9.10)
+    puma (2.6.0)
+      rack (>= 1.1, < 2.0)
     rack (1.5.2)
     rack-cache (1.2)
       rack (>= 0.4)
@@ -156,7 +159,9 @@ DEPENDENCIES
   dalli
   jbuilder (~> 1.2)
   jquery-rails
+  newrelic_rpm
   pry-rails
+  puma
   rack-cache
   rails (= 4.0.1)
   rspec-rails
