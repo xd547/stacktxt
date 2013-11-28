@@ -2,6 +2,8 @@
 
 **StackTXT** is a 'burn after reading' text sharing web application.    
 
+You can use this application via [http://overwall.net/](http://overwall.net/)
+
 **What's New**    
 Released v0.1.0     
 
