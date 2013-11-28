@@ -20,3 +20,6 @@ new_share = ->
 $("share").addEventListener("click", share) if $("share") 
 
 $("new").addEventListener("click", new_share) if $("new")
+
+
+share_content.innerHTML = make_link(share_content.innerHTML) if share_content and share_content.tagName == "PRE"
