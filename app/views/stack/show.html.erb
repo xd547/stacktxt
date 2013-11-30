@@ -1,3 +1,9 @@
+<div class="message">
+  Message will be burned in 
+  <span id="expire_time"><%= @share_obj[:created_at] + Settings.message.expire - DateTime.now.to_i %></span>
+   second(s) or 
+  <%= Settings.message.max_view_count - @share_obj[:view_count] - 1 %> view(s)
+</div>
 <nav>
   <h1><%= Settings.site.name %></h1>
   <button id="new">New</button>
@@ -5,5 +11,5 @@
   <a id="about" href="https://github.com/xd547/stacktxt">About</a>
 </nav>
 <pre id="share_content">
-  <%= @content %>
+  <%= @share_obj[:content] %>
 </pre>

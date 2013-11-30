@@ -26,7 +26,6 @@ class StackController < ApplicationController
   
     respond_to do |format|
       if Core::ShareActions.verify(share_key) and @share_obj
-        @content = @share_obj[:content]
         format.html
         format.json { render json: @share_obj }
       else

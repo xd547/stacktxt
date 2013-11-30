@@ -4,8 +4,10 @@
 
 You can use this application via [http://overwall.net/](http://overwall.net/)
 
-**What's New**    
-Released v0.1.0     
+**What's New**  
+
++ Show expire time and view count in message page    
++ Released v0.1.0     
 
 ## License
 
