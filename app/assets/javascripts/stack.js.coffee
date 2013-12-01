@@ -8,10 +8,12 @@ share_content.focus()
 share = ->
   shareForm = document.createElement("form")
   shareForm.setAttribute("method", "post")
-  shareForm.setAttribute("action", "")
+  shareForm.setAttribute("action", "/")
 
   shareForm.appendChild(share_content)
+  document.body.appendChild(shareForm)
   shareForm.submit()
+  document.body.removeChild(shareForm)
   return
 
 new_share = ->
